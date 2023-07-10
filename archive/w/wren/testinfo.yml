@@ -1,8 +1,0 @@
-folder:
-  extension: ".wren"
-  naming: "hyphen"
-
-container:
-  image: "esolang/wren"
-  tag: "latest"
-  cmd: "wren {{ source.name }}{{ source.extension }}"
