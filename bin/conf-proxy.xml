@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+<app-config code="PROXY" name="proxy-server">
+	<app-parameter>
+		<ssl-tunnel-required value="first" /><!-- [ none | first | only ] ,none is default. this option set  P2P tunnel  by SSL or NOT -->
+		<ssl-create-certfile value="true" /><!-- [ true | false ],if set true sg-server try to create default cacertfiles while not setted, ps: openssl must be installed -->
+	</app-parameter> 
+	<moudle-parameter>
+		<log-level value="LOG_ERROR"/>
+		<log-write-mode value="CONSOLE_ONLY"/>
+		<app-name value="cloudstudio" /><!-- need replace -->
+		<app-description value="access to this machine by proxy." /><!-- need replace -->
+		<user-audit value="6642070544981:5"/><!-- need replace and must is numeric-->
+    </moudle-parameter>
+    <!-- 配置上述代理服务器的ip或域�?端口，注意：ip必须为公网IP。ssl选项必须配置正确，如果代理服务器有证书（包括自动生成证书）且生效则配置为true否则为false -->
+    <channel address="desk.huaifengaichen.cloudns.org:9001" ssl="true" token="131415" /><!--访问token，必须与代理服务器一致，如果没有则不�?-->
+</app-config>
